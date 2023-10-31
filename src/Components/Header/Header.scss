@@ -1,0 +1,173 @@
+$wd: 1280px;
+$colorBlue: #133D8D;
+$font: Arial, Helvetica, sans-serif;
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header_container {
+    width: $wd;
+    margin: auto;
+    padding-bottom: 5%;
+}
+
+header {
+    width: 100%;
+    height: auto;
+    background: url(../../assets/headerBack.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: $font;
+
+    .header_header {
+        @include flexBetween();
+        padding-top: 30px;
+        padding-bottom: 30px;
+        border-bottom: 1px solid #FFFFFF80;
+
+        img {
+            cursor: pointer;
+        }
+
+        .header_info {
+            @include flexBetween();
+            color: white;
+            font-size: 18px;
+
+            p {
+                margin-right: 40px;
+            }
+        }
+    }
+
+    .header_bottom_info {
+        @include flexBetween();
+        margin-top: 40px;
+
+        a {
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+        }
+    }
+
+    .header_main {
+        @include flexBetween();
+        font-family: $font;
+        padding-top: 10%;
+        height: 700px;
+
+        .left_part {
+            width: 50%;
+            color: white;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .left_upper {
+                h1 {
+                    font-weight: 300;
+                    font-size: 60px;
+                    line-height: 84px;
+                }
+
+                p {
+                    margin: 40px 0;
+                    width: 80%;
+                    border-left: 2px solid #FFFFFF80;
+                    padding-left: 30px;
+                    line-height: 20px;
+                    font-size: 14px;
+                    font-weight: 500;
+                }
+
+                button {
+                    width: 170px;
+                    height: 51px;
+                    border: none;
+                    color: white;
+                    background-color: red;
+                    font-size: 20px;
+                    font-weight: 600;
+                    cursor: pointer;
+                }
+            }
+
+            .left_bottom {
+                @include flexBetween();
+                width: 150px;
+
+                .left_button,
+                .right_button {
+                    @include flexCenter();
+                    width: 60px;
+                    height: 60px;
+                    cursor: pointer;
+                    background-color: $colorBlue;
+                }
+            }
+        }
+
+        .right_part {
+            height: 100%;
+            width: 50%;
+            display: flex;
+            align-items: end;
+
+            .ship_info {
+                padding: 40px;
+                color: white;
+                font-family: $font;
+                width: 530px;
+                height: 240px;
+                background-color: #3333334D;
+
+                .info_of_ship {
+                    @include flexBetween();
+                    margin-top: 20px;
+                }
+
+                .info_text {
+                    display: flex;
+                    width: 70%;
+
+                    .text_block_p {
+                        margin-right: 20px;
+
+                        p {
+                            padding-bottom: 15px;
+                        }
+                    }
+
+                    .text_block_span {
+                        p {
+                            padding-bottom: 15px
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    $wd: 1024px;
+
+    header {
+        .header_container {
+            width: $wd;
+        }
+    }
+}

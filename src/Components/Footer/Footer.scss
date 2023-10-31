@@ -1,0 +1,78 @@
+$wd: 1280px;
+$colorBlue: #133D8D;
+$font: Arial, Helvetica, sans-serif;
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer{
+    @include flexCenter();
+    width: 100%;
+    height: auto;
+    background-color: $colorBlue;
+    color: white;
+    font-family: $font;
+    .footer_container{
+        width: $wd;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5% 0;
+        .footer_texts{
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 60px;
+            
+            .footer_text{
+                width: 24%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                a{
+                    font-size: 14px;
+                    font-weight: 500;
+                    color: white;
+                    text-decoration: none;
+                    margin-top: 20px;
+                }
+            }
+            .footer_text-info{
+                width: 24%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                text-align: end;
+                a{
+                    font-size: 16px;
+                    font-weight: 500;
+                    color: white;
+                    text-decoration: none;
+                    margin-bottom: 25px;
+                }
+                .mail{
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1280px) {
+    $wd: 1024px; 
+    footer{
+        .footer_container{
+            width: $wd;
+        }
+    }
+}

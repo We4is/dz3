@@ -1,0 +1,409 @@
+$wd: 1280px;
+$colorBlue: #133D8D;
+$font: Arial, Helvetica, sans-serif;
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flexBetween {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#block1 {
+    background: url('../../assets/mainBack2.png');
+}
+
+#block2 {
+    background: url('../../assets/mainBack3.png');
+}
+
+#block3 {
+    background: url('../../assets/mainBack4.png');
+}
+
+#block4 {
+    background: url('../../assets/mainBack5.png');
+}
+
+.main_upper {
+    width: $wd;
+    margin: auto;
+    padding: 8% 0 8% 0;
+    font-family: $font;
+
+    .upper_text {
+        @include flexBetween();
+        text-transform: uppercase;
+
+        h1 {
+            font-size: 48px;
+            font-weight: 400;
+        }
+
+        a {
+            text-decoration: none;
+            color: $colorBlue;
+            font-size: 18px;
+            font-weight: 600;
+        }
+    }
+
+    .upper_blocks {
+        @include flexBetween();
+        width: 100%;
+        margin-top: 5%;
+
+        .upper_block {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 22%;
+            height: 330px;
+            color: white;
+            padding: 20px;
+
+            .table_p {
+                width: 140px;
+                height: 30px;
+                font-size: 14px;
+                background-color: red;
+                @include flexCenter();
+            }
+
+            .text_block {
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                height: 60%;
+
+                p {
+                    font-size: 16px;
+                    font-weight: 600;
+                    line-height: 22px;
+                }
+
+                h5 {
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 20px;
+                }
+            }
+        }
+    }
+}
+
+.main_history_block {
+    width: 100%;
+    height: auto;
+    background-color: $colorBlue;
+
+    .main-container {
+        width: $wd;
+        height: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        padding: 5% 0 5% 0;
+        color: white;
+        font-family: $font;
+
+        .main_history_block-left {
+            width: 40%;
+
+            h1 {
+                font-size: 36px;
+                font-weight: 400;
+            }
+
+            p {
+                margin-top: 20px;
+                line-height: 19.6px;
+                font-size: 14px;
+            }
+        }
+
+        .main_history_block-right {
+            width: 50%;
+            margin-top: 5%;
+
+            .main_history_block-types {
+                margin-top: 10%;
+                margin-left: 40px;
+
+                .main_history_block-type {
+                    display: flex;
+                    align-items: center;
+                    margin-bottom: 10px;
+
+                    img {
+                        width: 8px;
+                        height: 8px;
+                        margin-right: 10px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.info_of_ships {
+    width: $wd;
+    margin: auto;
+    font-family: $font;
+    padding: 5% 0;
+
+    .info_text {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 5%;
+
+        a {
+            text-decoration: none;
+            color: $colorBlue;
+            font-size: 18px;
+        }
+    }
+
+    .info_blocks {
+        @include flexBetween();
+
+        .info_blocks-block {
+            width: 306px;
+            height: 480px;
+
+            .info_blocks_block-text {
+                p {
+                    color: grey;
+                    margin-top: 20px;
+                }
+
+                h3 {
+                    font-weight: 700;
+                    font-size: 16px;
+                    line-height: 22.4px;
+                    margin: 20px 0;
+                }
+
+                a {
+                    text-decoration: none;
+                    font-size: 14px;
+                    color: $colorBlue;
+                    font-weight: 400;
+                }
+            }
+        }
+    }
+}
+
+.specifications_of_ship {
+    width: 100%;
+    background-color: #133D8D80;
+    color: white;
+    font-family: $font;
+    .specifications_of_ship-container {
+        width: $wd;
+        margin: auto;
+        padding: 5% 0 10% 0;
+        .specifications_of_ship-upper {
+            @include flexBetween();
+            padding-bottom: 5%;
+            h1{
+                font-size: 36px;
+                font-weight: 400
+            }
+            .specifications_of_ship-upper-block {
+                @include flexBetween();
+                width: 310px;
+                p{
+                    font-size: 22px;
+                    font-weight: 600
+                }
+                .specifications_of_ship-buttons{
+                    @include flexBetween();
+                    width: 140px;
+                    button{
+                        width: 60px;
+                        height: 60px;
+                        background-color: $colorBlue;
+                        border: none;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+        .specifications_of_ship-down{
+            @include flexBetween();
+            width: 100%;
+            height: 600px;
+            .specifications_of_ship-left{
+                width: 55%;
+                height: 100%;
+                background-image: url('../../assets/specificationsShip.png');
+                background-repeat: no-repeat;
+                background-size: cover;
+                padding: 0 160px 40px 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: end;
+                h1{
+                    font-size: 24px;
+                    font-weight: 700;
+                    line-height: 33.6px;
+                    margin-bottom: 20px;
+                }
+                p{
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 19.6px;
+                }
+            }
+            .specifications_of_ship-right{
+                width: 45%;
+                height: 100%;
+                background-color: $colorBlue;
+                padding: 40px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                button{
+                    width: 170px;
+                    height: 51px;
+                    font-size: 18px;
+                    font-weight: 700;
+                    border: 1px solid white;
+                    color: white;
+                    background-color: inherit;
+                    cursor: pointer;
+                }
+                .specifications_of_ship-blocks{
+                    display: flex;
+                    flex-wrap: wrap;
+                    .specifications_of_ship-block{
+                        width: 210px;
+                        height: 100px;
+                        margin-bottom: 40px;
+                        span{
+                            font-size: 40px;
+                            font-weight: 700;
+                        }
+                        p{
+                            margin-top: 20px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.guarantees_block{
+    @include flexCenter();
+    width: 100%;
+    height: auto;
+    .guarantees-container{
+        @include flexBetween();
+        width: $wd;
+        height: auto;
+        padding: 5% 0;
+        button{
+            width: 60px;
+            height: 60px;
+            background-color: $colorBlue;
+            border: none;
+            cursor: pointer;
+        }
+        .guarantees_information{
+            @include flexBetween();
+            padding: 60px 40px;
+            color: black;
+            font-family: $font;
+            width: 80%;
+            height: auto;
+            background-color: #133D8D26;
+            .guarantees-texts{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                height: 100%;
+                margin-right: 40px;
+                button{
+                    width: 157px;
+                    height: 31px;
+                    background-color: $colorBlue;
+                    border: none;
+                    cursor: pointer;
+                    color: white;
+                }
+                h2{
+                    font-size: 24px;
+                    font-weight: 600;
+                    padding-top: 30px;
+                }
+                .guarantees-text{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-top: 20px;
+                    p{
+                        font-size: 14px;
+                        font-weight: 400;
+                        line-height: 19.6px;
+                    }
+                    img{
+                        width: 8px;
+                        height: 8px;
+                        margin-right: 15px;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+@media (max-width: 1280px) {
+    $wd: 1024px;
+    .main_upper, .info_of_ships{
+        width: $wd;
+    }
+    .main_history_block{
+        .main-container{
+            width: $wd;
+        }
+    }
+    .specifications_of_ship{
+        .specifications_of_ship-container{
+            width: $wd;
+            .specifications_of_ship-down{
+                .specifications_of_ship-right{
+                    padding: 20px;
+                }
+            }
+        }
+    }
+    .guarantees_block{
+        .guarantees_block-container{
+            width: $wd;
+        }
+    }
+    .info_blocks{
+        flex-wrap: wrap;
+        .info_blocks-block{
+            margin-left: 5%;
+        }
+    }
+    .main_history_block{
+        .main-container{
+            .main_history_block-right{
+                img{
+                    width: 90%;
+                }
+            }
+        }
+    } 
+}
